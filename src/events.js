@@ -8,20 +8,14 @@ var filtering = []; // json array key value
 var paging = "";
 var expand = "";
 // html template for each item returned By the rest sharepoint api call
-var template = '<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"><div class="info-card"><img style="width: 100%" src="'
-    + '[item.Image/Url]'
-    + '" /><div class="info-card-details animate"><div class="info-card-header"><h1>'
-    + '[item.Title]'
-    + ' '
-    + '[item.Prenom]'
-    + '</h1><h3>'
-    + '[item.Service]'
-    + '</h3></div><div class="info-card-detail"><p>'
-    + '[item.Comments]'
-    + '<div class="info-card-footer [item.Visible]"><a href="'
-    + '[item.Annuaire]'
-    + '" target="_blank"><i class="fas fa-address-book fa-3x"></i></a></div>'
-    + '</p></div></div></div></div>'; // you can change
+var template = '<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"><div><i class="fas fa-calendar-alt"></i></div>'
+        +'<div>[item.Title]</div>' 
+        +'<div>[item.EventDate]</div>' 
+        +'<div>[item.EndDate]</div>' 
+        +'<div>[item.Location]</div>' 
+        + '<div>[item.Description]</div>' 
+        + '<div>[item.Category]</div>'
+        +'</div>'; // you can change
 
 $(document).ready(function () {
     render();
