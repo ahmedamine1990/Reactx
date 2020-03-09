@@ -1,6 +1,11 @@
 {
   "presets": [
-    "@babel/env",
+    ["@babel/env",     
+     { "targets": {   
+      "ie": "11"
+    }
+      }]    
+    ,
     "@babel/preset-react",
     [
       "@babel/preset-stage-2",
